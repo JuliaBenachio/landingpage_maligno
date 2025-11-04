@@ -1,0 +1,105 @@
+@use 'variaveis';
+
+.about {
+    color: variaveis.$corTextoPrincipal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin: 0;
+    text-align: center;
+    
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+        margin: 6rem 0 3rem 0;
+    }
+
+    p {
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 300;
+        max-width: 700px;
+        line-height: 1.6;
+        letter-spacing: 0.3px;
+        animation: fadeIn 2s ease;
+        margin: 0 0 1rem 0;
+
+        &:last-child {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    }
+
+    @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }
+    
+
+    &__movie {
+        display: block;
+
+    }
+
+    @media (max-width: 1024px) {
+        height: auto;
+        padding: 4rem 3rem;
+
+        &__title {
+            font-size: 2rem;
+            margin: 4rem 0 2rem 0;
+        }
+
+        p {
+            font-size: 1rem;
+            max-width: 600px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        height: auto;
+        padding: 3rem 2rem;
+
+        &__title {
+            font-size: 1.8rem;
+            margin: 3rem 0 1.5rem 0;
+        }
+
+        p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        p:last-child {
+            font-size: 1.3rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        padding: 2rem 1.5rem;
+
+        &__title {
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem 0;
+        }
+
+        p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        p:last-child {
+            font-size: 1.1rem;
+        }
+    }
+}
+
